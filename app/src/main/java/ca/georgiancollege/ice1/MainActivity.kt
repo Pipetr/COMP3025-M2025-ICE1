@@ -2,6 +2,7 @@ package ca.georgiancollege.ice1
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,9 +23,17 @@ class MainActivity : AppCompatActivity() {
 
         val greetingTextView =  findViewById<TextView>(R.id.greetingTextView)
         val greetingButton = findViewById<Button>(R.id.greetingButton)
+        val editTextUserName = findViewById<EditText>(R.id.editTextUserName)
+
+
 
         greetingButton.setOnClickListener {
-            greetingTextView.text = "Hello, World"
+            val name = editTextUserName.text.toString()
+            val greeting = "hello, ${name}"
+            greetingTextView.text = greeting
+            editTextUserName.text.clear()
         }
+
+
     }
 }

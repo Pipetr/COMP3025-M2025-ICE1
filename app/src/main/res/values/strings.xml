@@ -2,4 +2,5 @@
     <string name="app_name">ICE1</string>
     <string name="hello_text">Hello!</string>
     <string name="say_hello">Say Hello</string>
+    <string name="enter_your_name_Edit_text">Enter your name</string>
 </resources>
