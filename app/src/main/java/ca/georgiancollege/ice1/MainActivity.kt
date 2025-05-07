@@ -25,7 +25,11 @@ class MainActivity : AppCompatActivity() {
         val greetingButton = findViewById<Button>(R.id.greetingButton)
         val editTextUserName = findViewById<EditText>(R.id.editTextUserName)
 
-
+        editTextUserName.setOnFocusChangeListener { _, hasFocus ->
+            if(hasFocus){
+                editTextUserName.text.clear()
+            }
+        }
 
         greetingButton.setOnClickListener {
             val name = editTextUserName.text.toString()
